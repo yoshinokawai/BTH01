@@ -63,7 +63,7 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.header}>
                 <View style={styles.headerLeft}>
                     <Text style={styles.greeting}>Hello 👋</Text>
-                    <Text style={styles.userName}>Christie Doe</Text>
+                    <Text style={styles.userName}>PHAM QUANG LINH</Text>
                 </View>
                 <Image
                     source={require('../assets/avatar.png')}

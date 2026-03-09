@@ -8,7 +8,6 @@ import {
     SafeAreaView,
     StatusBar,
     Animated,
-    Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './styles/scanStyles';
@@ -53,7 +52,7 @@ export default function ScanScreen({ navigation }) {
                     <Pressable
                         style={({ pressed }) => [
                             styles.backButton,
-                            { opacity: pressed ? 0.7 : 1, cursor: 'pointer' },
+                            { opacity: pressed ? 0.7 : 1 },
                         ]}
                         onPress={() => navigation.goBack()}
                     >

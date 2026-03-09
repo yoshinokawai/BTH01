@@ -48,7 +48,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-        gap: CARD_GAP,
+        rowGap: CARD_GAP,
     },
     card: {
         width: CARD_WIDTH,

@@ -121,7 +121,7 @@ export default StyleSheet.create({
     productCard: {
         position: 'absolute',
         bottom: 36,
-        alignSelf: 'center',
+        left: (width - SCREEN_WIDTH * 0.82) / 2,
         width: SCREEN_WIDTH * 0.82,
         height: 82,
         backgroundColor: '#FFFFFF',
