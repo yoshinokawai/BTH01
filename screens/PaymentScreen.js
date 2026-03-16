@@ -35,10 +35,7 @@ export default function PaymentScreen({ navigation }) {
                             style={styles.backButton} 
                             onPress={() => navigation.goBack()}
                         >
-                            <Image 
-                                source={require('../imgs/Arrow 1-2.jpg')}
-                                style={{ width: 20, height: 20, resizeMode: 'contain' }}
-                            />
+                            <Ionicons name="chevron-back" size={24} color="#5B6AF0" />
                         </TouchableOpacity>
                         
                         <View style={styles.headerTitleContainer}>
@@ -71,10 +68,10 @@ export default function PaymentScreen({ navigation }) {
                                 ]}
                                 onPress={() => setActiveTab('credit')}
                             >
-                                <Image 
-                                    source={require('../imgs/Active tab.jpg')}
-                                    style={{ width: '100%', height: '100%', borderRadius: 16 }}
-                                />
+                                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                    <Ionicons name="card" size={20} color={activeTab === 'credit' ? "#FFF" : "#000"} />
+                                    <Text style={activeTab === 'credit' ? styles.activeTabText : styles.inactiveTabText}>Credit card</Text>
+                                </View>
                             </TouchableOpacity>
                             
                             <TouchableOpacity 
@@ -86,14 +83,8 @@ export default function PaymentScreen({ navigation }) {
                                 onPress={() => setActiveTab('apple')}
                             >
                                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                    <Image 
-                                        source={require('../imgs/Apple icon.jpg')}
-                                        style={{ width: 16, height: 19, resizeMode: 'contain', marginRight: 8 }}
-                                    />
-                                    <Image 
-                                        source={require('../imgs/Apple Pay.jpg')}
-                                        style={{ width: 83, height: 17, resizeMode: 'contain' }}
-                                    />
+                                    <FontAwesome name="apple" size={20} color={activeTab === 'apple' ? "#FFF" : "#000"} />
+                                    <Text style={activeTab === 'apple' ? styles.activeTabText : styles.inactiveTabText}>Apple Pay</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -173,13 +164,11 @@ export default function PaymentScreen({ navigation }) {
 
                         {/* Pay Button */}
                         <TouchableOpacity 
-                            style={[styles.payButton, { backgroundColor: '#21C063', borderStyle: 'solid' }]} 
+                            style={styles.payButton} 
                             onPress={handlePay}
                         >
-                            <Image 
-                                source={require('../imgs/Proceed to checkout.jpg')}
-                                style={{ width: 180, height: 20, resizeMode: 'contain' }}
-                            />
+                            <Ionicons name="lock-closed" size={20} color="#FFF" />
+                            <Text style={styles.payButtonText}>Pay for the order</Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
