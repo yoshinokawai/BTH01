@@ -49,9 +49,9 @@ export default StyleSheet.create({
     marginBottom: 12,
   },
   itemImage: {
-    width: 56,
-    height: 56,
-    borderRadius: 14,
+    width: 64,
+    height: 64,
+    borderRadius: 16,
     marginRight: 12,
   },
   placeholderThumb: {
@@ -85,6 +85,7 @@ export default StyleSheet.create({
     fontSize: 13,
     color: '#6B7280',
     marginTop: 2,
+    display: 'none', // Hidden as per mockup layout for info section
   },
   priceRight: {
     alignItems: 'flex-end',
@@ -93,7 +94,30 @@ export default StyleSheet.create({
   itemPriceText: {
     fontSize: 16,
     fontWeight: '700',
+    color: '#FF8A65',
+    marginTop: 4,
+  },
+  qtySelector: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FAFAFA',
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+  },
+  qtyBtn: {
+    padding: 4,
+  },
+  qtyBtnText: {
+    fontSize: 18,
+    color: '#FF8A65',
+    fontWeight: '400',
+  },
+  qtyValue: {
+    fontSize: 14,
+    fontWeight: '600',
     color: '#111827',
+    marginHorizontal: 12,
   },
   footer: {
     paddingHorizontal: 24,
@@ -113,9 +137,9 @@ export default StyleSheet.create({
     color: '#6B7280',
   },
   totalValue: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '700',
-    color: '#111827',
+    color: '#FF8A65',
   },
   checkoutButton: {
     height: 56,

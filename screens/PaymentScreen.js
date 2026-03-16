@@ -39,21 +39,12 @@ export default function PaymentScreen({ navigation }) {
                         </TouchableOpacity>
                         
                         <View style={styles.headerTitleContainer}>
-                            <Image 
-                                source={require('../imgs/Checkout 💳.jpg')}
-                                style={{ width: 129, height: 22, resizeMode: 'contain' }}
-                            />
+                            <Text style={styles.headerTitle}>Checkout 💳</Text>
                         </View>
                         
                         <View style={styles.headerRight}>
-                            <Image 
-                                source={require('../imgs/₹ 1,527.jpg')}
-                                style={{ width: 58, height: 16, resizeMode: 'contain' }}
-                            />
-                            <Image 
-                                source={require('../imgs/Including GST (18%).jpg')}
-                                style={{ width: 124, height: 14, resizeMode: 'contain', marginTop: 4 }}
-                            />
+                            <Text style={styles.totalAmount}>₹ 1,527</Text>
+                            <Text style={styles.gstText}>Including GST (18%)</Text>
                         </View>
                     </View>
 
@@ -91,15 +82,9 @@ export default function PaymentScreen({ navigation }) {
 
                         {/* Form */}
                         <View style={styles.inputSection}>
-                            <Image 
-                                source={require('../imgs/Card number.jpg')}
-                                style={{ width: 98, height: 12, resizeMode: 'contain', marginBottom: 8 }}
-                            />
+                            <Text style={styles.inputLabel}>Card number</Text>
                             <View style={styles.inputContainer}>
-                                <Image 
-                                    source={require('../imgs/5261 4141 0151 8472.jpg')}
-                                    style={{ width: 170, height: 12, resizeMode: 'contain' }}
-                                />
+                                <Text style={styles.inputValue}>5261 4141 0151 8472</Text>
                                 <View style={styles.cardIcons}>
                                     <Image 
                                         source={require('../imgs/Master Card Logo.jpg')}
@@ -111,44 +96,26 @@ export default function PaymentScreen({ navigation }) {
                         </View>
 
                         <View style={styles.inputSection}>
-                            <Image 
-                                source={require('../imgs/Cardholder name.jpg')}
-                                style={{ width: 130, height: 12, resizeMode: 'contain', marginBottom: 8 }}
-                            />
+                            <Text style={styles.inputLabel}>Cardholder name</Text>
                             <View style={styles.inputContainer}>
-                                <Image 
-                                    source={require('../imgs/Christie Doe.jpg')}
-                                    style={{ width: 88, height: 12, resizeMode: 'contain' }}
-                                />
+                                <Text style={styles.inputValue}>Christie Doe</Text>
                             </View>
                         </View>
 
                         <View style={styles.row}>
                             <View style={[styles.inputSection, styles.halfInput]}>
-                                <Image 
-                                    source={require('../imgs/Expiry date.jpg')}
-                                    style={{ width: 84, height: 15, resizeMode: 'contain', marginBottom: 8 }}
-                                />
+                                <Text style={styles.inputLabel}>Expiry date</Text>
                                 <View style={styles.inputContainer}>
-                                    <Image 
-                                        source={require('../imgs/06/2024.jpg')}
-                                        style={{ width: 80, height: 12, resizeMode: 'contain' }}
-                                    />
+                                    <Text style={styles.inputValue}>06  /  2024</Text>
                                 </View>
                             </View>
 
                             <View style={[styles.inputSection, styles.halfInput]}>
                                 <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
-                                    <Image 
-                                        source={require('../imgs/CVV/CVC.jpg')}
-                                        style={{ width: 80, height: 12, resizeMode: 'contain' }}
-                                    />
+                                    <Text style={styles.inputLabel}>CVV / CVC</Text>
                                 </View>
                                 <View style={styles.inputContainer}>
-                                    <Image 
-                                        source={require('../imgs/915.jpg')}
-                                        style={{ width: 25, height: 12, resizeMode: 'contain', marginRight: 'auto' }}
-                                    />
+                                    <Text style={[styles.inputValue, { marginRight: 'auto' }]}>915</Text>
                                     <Image 
                                         source={require('../imgs/Hint.jpg')}
                                         style={{ width: 18, height: 18, resizeMode: 'contain' }}
@@ -157,10 +124,9 @@ export default function PaymentScreen({ navigation }) {
                             </View>
                         </View>
 
-                        <Image 
-                            source={require('../imgs/We will send you an order details to your email after the successfull payment.jpg')}
-                            style={{ width: '100%', height: 28, resizeMode: 'contain', marginVertical: 20 }}
-                        />
+                        <Text style={styles.infoText}>
+                            We will send you an order details to your email after the successfull payment
+                        </Text>
 
                         {/* Pay Button */}
                         <TouchableOpacity 

@@ -44,10 +44,18 @@ export default function CartScreen({ navigation }) {
       <View style={styles.itemInfo}>
         <Text style={styles.brandText}>{item.brand}</Text>
         <Text style={styles.itemNameText}>{item.name}</Text>
-        <Text style={styles.itemQty}>Qty: {item.qty}</Text>
+        <Text style={styles.itemPriceText}>₹ {item.price}</Text>
       </View>
       <View style={styles.priceRight}>
-        <Text style={styles.itemPriceText}>₹ {item.price * item.qty}</Text>
+        <View style={styles.qtySelector}>
+          <TouchableOpacity style={styles.qtyBtn}>
+            <Text style={styles.qtyBtnText}>−</Text>
+          </TouchableOpacity>
+          <Text style={styles.qtyValue}>{item.qty}</Text>
+          <TouchableOpacity style={styles.qtyBtn}>
+            <Text style={styles.qtyBtnText}>+</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -63,7 +71,7 @@ export default function CartScreen({ navigation }) {
           </View>
         </TouchableOpacity>
         <View style={styles.headerTitleWrap}>
-          <Text style={styles.headerTitle}>Your Cart 👍🏻</Text>
+          <Text style={styles.headerTitle}>Your Cart 🤙</Text>
         </View>
         <View style={{ width: 44 }} />
       </View>

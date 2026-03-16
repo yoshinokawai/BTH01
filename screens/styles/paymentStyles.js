@@ -41,7 +41,7 @@ export default StyleSheet.create({
     totalAmount: {
         fontSize: 22,
         fontWeight: 'bold',
-        color: '#21C063',
+        color: '#FF8A65',
     },
     gstText: {
         fontSize: 12,
@@ -112,6 +112,11 @@ export default StyleSheet.create({
         fontSize: 16,
         color: '#000',
     },
+    inputValue: {
+        fontSize: 16,
+        color: '#111827',
+        fontWeight: '500',
+    },
     cardIcons: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -125,10 +130,10 @@ export default StyleSheet.create({
     },
     infoText: {
         fontSize: 12,
-        color: '#888',
+        color: '#9CA3AF',
         textAlign: 'center',
         marginTop: 10,
-        marginBottom: 40,
+        marginBottom: 30,
         paddingHorizontal: 20,
         lineHeight: 18,
     },
