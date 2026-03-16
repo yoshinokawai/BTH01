@@ -35,7 +35,10 @@ export default function PaymentScreen({ navigation }) {
                             style={styles.backButton} 
                             onPress={() => navigation.goBack()}
                         >
-                            <Ionicons name="chevron-back" size={24} color="#000" />
+                            <Image 
+                                source={require('../imgs/Arrow 1-2.jpg')}
+                                style={{ width: 20, height: 20, resizeMode: 'contain' }}
+                            />
                         </TouchableOpacity>
                         
                         <View style={styles.headerTitleContainer}>
@@ -173,8 +176,10 @@ export default function PaymentScreen({ navigation }) {
                             style={[styles.payButton, { backgroundColor: '#21C063', borderStyle: 'solid' }]} 
                             onPress={handlePay}
                         >
-                            <Ionicons name="lock-closed" size={20} color="#FFF" />
-                            <Text style={styles.payButtonText}>Pay for the order</Text>
+                            <Image 
+                                source={require('../imgs/Proceed to checkout.jpg')}
+                                style={{ width: 180, height: 20, resizeMode: 'contain' }}
+                            />
                         </TouchableOpacity>
                     </View>
                 </ScrollView>

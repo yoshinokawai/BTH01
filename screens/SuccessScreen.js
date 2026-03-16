@@ -45,10 +45,7 @@ export default function SuccessScreen({ navigation }) {
                     style={[styles.secondaryButton, { backgroundColor: '#5B6AF0' }]}
                     onPress={() => {}}
                 >
-                    <Image 
-                        source={require('../imgs/Download Invoice.jpg')}
-                        style={{ width: 152, height: 14, resizeMode: 'contain' }}
-                    />
+                    <Text style={{ color: '#FFFFFF', fontSize: 16, fontWeight: '700' }}>Download Invoice</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
