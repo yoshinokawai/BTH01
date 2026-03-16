@@ -17,7 +17,7 @@ const mockItems = [
     name: 'Skimmed Milk',
     price: 129,
     qty: 1,
-    thumbnail: null,
+    thumbnail: require('../imgs/Rectangle 31.jpg'),
   },
   {
     id: '3',
@@ -25,7 +25,7 @@ const mockItems = [
     name: 'Aloe Vera Lotion',
     price: 1249,
     qty: 1,
-    thumbnail: null,
+    thumbnail: require('../imgs/Rectangle 45.jpg'),
   },
 ];
 
