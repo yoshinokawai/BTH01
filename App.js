@@ -50,7 +50,7 @@ function MainTabs() {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: styles.tabBar,
+        tabBarStyle: ['Home', 'Cart'].includes(route.name) ? styles.tabBar : { display: 'none' },
         tabBarIcon: ({ focused }) => {
           let iconName = 'home-outline';
           if (route.name === 'Home') iconName = focused ? 'home' : 'home-outline';
