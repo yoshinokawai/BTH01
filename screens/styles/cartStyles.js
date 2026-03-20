@@ -121,7 +121,8 @@ export default StyleSheet.create({
   },
   footer: {
     paddingHorizontal: 24,
-    paddingVertical: 16,
+    paddingTop: 16,
+    paddingBottom: 96, // 16px standard + 80px for the floating TabBar
     borderTopWidth: 1,
     borderTopColor: '#E5E7EB',
     backgroundColor: '#FFFFFF',

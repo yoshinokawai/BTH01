@@ -156,4 +156,14 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 8,
     },
+    errorText: {
+        color: '#EF4444',
+        fontSize: 12,
+        marginTop: 4,
+        marginLeft: 4,
+    },
+    inputErrorContainer: {
+        borderColor: '#EF4444',
+        borderWidth: 1.5,
+    }
 });

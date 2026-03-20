@@ -9,6 +9,7 @@ export default StyleSheet.create({
         flex: 1,
         backgroundColor: '#F8F9FA',
         paddingTop: 50,
+        paddingBottom: 96, // 16px standard + 80px for the floating TabBar
         paddingHorizontal: 24,
     },
     header: {
