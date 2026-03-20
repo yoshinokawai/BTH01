@@ -2,8 +2,8 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
 const SCREEN_WIDTH = Math.min(width, 390);
-const VIEWFINDER_WIDTH = SCREEN_WIDTH * 0.82;
-const VIEWFINDER_HEIGHT = VIEWFINDER_WIDTH * 1.66;
+const VIEWFINDER_WIDTH = SCREEN_WIDTH * 0.58;
+const VIEWFINDER_HEIGHT = SCREEN_WIDTH * 1.15;
 const CORNER_SIZE = 36;
 const CORNER_THICKNESS = 3.5;
 
@@ -42,6 +42,11 @@ export default StyleSheet.create({
         fontWeight: '300',
         marginTop: -2,
     },
+    backArrowImage: {
+        width: 16,
+        height: 16,
+        marginRight: 2, // fine tune arrow visual center
+    },
 
     // Viewfinder
     viewfinderContainer: {
@@ -51,16 +56,63 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 0,
-        borderWidth: 3.5,
-        borderColor: 'rgba(255,255,255,0.9)',
+        // Removed full border to use corner markers instead
         borderRadius: 40,
         overflow: 'hidden',
     },
 
+    // Corner Markers
+    cornerMarker: {
+        position: 'absolute',
+        width: CORNER_SIZE,
+        height: CORNER_SIZE,
+        borderColor: '#FFFFFF',
+    },
+    cornerTopLeft: {
+        top: 0,
+        left: 0,
+        borderTopWidth: CORNER_THICKNESS,
+        borderLeftWidth: CORNER_THICKNESS,
+        borderTopLeftRadius: 36,
+    },
+    cornerTopRight: {
+        top: 0,
+        right: 0,
+        borderTopWidth: CORNER_THICKNESS,
+        borderRightWidth: CORNER_THICKNESS,
+        borderTopRightRadius: 36,
+    },
+    cornerBottomLeft: {
+        bottom: 0,
+        left: 0,
+        borderBottomWidth: CORNER_THICKNESS,
+        borderLeftWidth: CORNER_THICKNESS,
+        borderBottomLeftRadius: 36,
+    },
+    cornerBottomRight: {
+        bottom: 0,
+        right: 0,
+        borderBottomWidth: CORNER_THICKNESS,
+        borderRightWidth: CORNER_THICKNESS,
+        borderBottomRightRadius: 36,
+    },
+
+    // Glass Overlay
+    glassOverlay: {
+        position: 'absolute',
+        width: VIEWFINDER_WIDTH * 1.05,
+        height: 100,
+        backgroundColor: 'rgba(255, 255, 255, 0.22)',
+        borderRadius: 20,
+        borderWidth: 1.5,
+        borderColor: 'rgba(255, 255, 255, 0.4)',
+        zIndex: 5,
+    },
+
     // Product Image
     productImage: {
-        width: VIEWFINDER_WIDTH * 0.58,
-        height: VIEWFINDER_HEIGHT * 0.85,
+        width: VIEWFINDER_WIDTH * 0.9,
+        height: VIEWFINDER_HEIGHT * 0.95,
     },
 
     // Scanning Line (thin line like Figma: 150×3 + 138×3)
@@ -73,16 +125,16 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     scanLineLeft: {
-        width: VIEWFINDER_WIDTH * 0.47,
+        width: VIEWFINDER_WIDTH * 0.45,
         height: 3,
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         borderRadius: 1.5,
     },
     scanLineGap: {
-        width: 8,
+        width: VIEWFINDER_WIDTH * 0.1,
     },
     scanLineRight: {
-        width: VIEWFINDER_WIDTH * 0.43,
+        width: VIEWFINDER_WIDTH * 0.45,
         height: 3,
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         borderRadius: 1.5,

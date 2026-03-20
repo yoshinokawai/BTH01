@@ -56,19 +56,32 @@ export default function ScanScreen({ navigation }) {
                         ]}
                         onPress={() => navigation.goBack()}
                     >
-                        <Text style={styles.backIcon}>‹</Text>
+                        <Image 
+                            source={require('../imgs/Arrow 1-2.jpg')} 
+                            style={styles.backArrowImage} 
+                            resizeMode="contain"
+                        />
                     </Pressable>
 
                     {/* Scanner Viewfinder */}
                     <View style={styles.viewfinderContainer}>
                         {/* Product Image */}
                         <Image
-                            source={require('../assets/juice.jpg')}
+                            source={require('../imgs/glass-bottle-mockups-for-food-and-beverage-packaging-cover 1.jpg')}
                             style={styles.productImage}
                             resizeMode="contain"
                         />
 
-                        {/* Scanning Line (two thin segments like Figma) */}
+                        {/* Glass Overlay */}
+                        <View style={styles.glassOverlay} />
+
+                        {/* Corner Markers */}
+                        <View style={[styles.cornerMarker, styles.cornerTopLeft]} />
+                        <View style={[styles.cornerMarker, styles.cornerTopRight]} />
+                        <View style={[styles.cornerMarker, styles.cornerBottomLeft]} />
+                        <View style={[styles.cornerMarker, styles.cornerBottomRight]} />
+
+                        {/* Scanning Line */}
                         <Animated.View
                             style={[
                                 styles.scanLineContainer,
@@ -86,7 +99,7 @@ export default function ScanScreen({ navigation }) {
                     {/* Bottom Product Card */}
                     <View style={styles.productCard}>
                         <Image
-                            source={require('../assets/juice.jpg')}
+                            source={require('../imgs/glass-bottle-mockups-for-food-and-beverage-packaging-cover 1.jpg')}
                             style={styles.productThumbnail}
                             resizeMode="cover"
                         />
