@@ -21,24 +21,20 @@ export default function SuccessScreen({ navigation }) {
                     style={{ width: 281, height: 251, resizeMode: 'contain', marginBottom: 40 }}
                 />
 
-                <Image 
-                    source={require('../imgs/Payment Success, Yayy!.jpg')}
-                    style={{ width: 205, height: 17, resizeMode: 'contain', marginBottom: 16 }}
-                />
+                <Text style={styles.title}>Payment Success, Yayy!</Text>
                 
-                <Image 
-                    source={require('../imgs/we will send order details and invoice in your contact no. and registered email.jpg')}
-                    style={{ width: 250, height: 34, resizeMode: 'contain', marginBottom: 40 }}
-                />
+                <Text style={styles.subtitle}>
+                    we will send order details and invoice in your contact no. and registered email.
+                </Text>
 
                 <TouchableOpacity 
-                    style={{ marginVertical: 20 }}
+                    style={{ marginVertical: 20, flexDirection: 'row', alignItems: 'center' }}
                     onPress={() => navigation.navigate('Home')}
                 >
-                    <Image 
-                        source={require('../imgs/Group 168.jpg')}
-                        style={{ width: 139, height: 24, resizeMode: 'contain' }}
-                    />
+                    <Text style={{ color: '#5B6AF0', fontSize: 16, fontWeight: '600', marginRight: 8 }}>
+                        Check Details
+                    </Text>
+                    <Ionicons name="arrow-forward" size={20} color="#5B6AF0" />
                 </TouchableOpacity>
 
                 <TouchableOpacity 
