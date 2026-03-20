@@ -107,7 +107,11 @@ export default function ScanScreen({ navigation }) {
                             <Text style={styles.productBrand}>Lauren's</Text>
                             <Text style={styles.productName}>Orange Juice</Text>
                         </View>
-                        <TouchableOpacity style={styles.addButton} activeOpacity={0.7}>
+                        <TouchableOpacity 
+                            style={styles.addButton} 
+                            activeOpacity={0.7}
+                            onPress={() => navigation.navigate('Cart')}
+                        >
                             <Text style={styles.addIcon}>+</Text>
                         </TouchableOpacity>
                     </View>
